@@ -2,7 +2,7 @@ import { analyseMultiplet } from '/Volumes/san256/users_for_mac_system_macPro/je
 import { writeFileSync } from 'fs';
 import { join } from 'path';
 
-export function myModule(data = {}, options = {}) {
+export function myModule(data = {}) {
   let result = analyseMultiplet(data, {
   frequency: 600,
   debug: true,
