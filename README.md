@@ -24,6 +24,11 @@ const result = library(args);
 OK :
 ```
 npm install multiplet-analysis
+ 
+ *or*
+
+npm link multiplet-analysis
+npm i --save-dev esm
 node -r esm examples/test.js
 ```
 this returns:
