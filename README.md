@@ -19,7 +19,7 @@ const result = library(args);
 // result is ...
 ```
 
-OK (but this is not the last version of multiplet-analysis):
+OK :
 ```
 npm install multiplet-analysis
 node -r esm examples/test.js
@@ -39,7 +39,7 @@ J:: 0.8079268967016162
 }
 42
 ```
-
+...(but this is not the last version of multiplet-analysis)
 Not OK:
 ```
 npm link multiplet-analysis
