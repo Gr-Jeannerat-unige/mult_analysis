@@ -19,17 +19,51 @@ const result = library(args);
 // result is ...
 ```
 
-OK:
+OK (but this is not the last version of multiplet-analysis):
 ```
 npm install multiplet-analysis
 node -r esm examples/test.js
 ```
+this returns:
+```
+interpolating
+J:: 5.15367032864944
+J:: 0.8079268967016162
+{
+  j: [
+    { multiplicity: 'd', coupling: 5.15367032864944 },
+    { multiplicity: 'd', coupling: 0.8079268967016162 }
+  ],
+  debug: { steps: [ [Object], [Object], [Object] ] },
+  chemShift: 6.336656878700529
+}
+42
+```
+
 Not OK:
 ```
 npm link multiplet-analysis
 node -r esm examples/test.js
 ```
-
+returns:
+```
+/Volumes/san256/users_for_mac_system_macPro/jeannerat/mnova_projects/multiplet_analysis/node_modules/esm/esm.js:1
+Error: Cannot find module 'multiplet-analysis'. Please verify that the package.json has a valid "main" entry
+    at new MAIN_NOT_FOUND (/Volumes/san256/users_for_mac_system_macPro/jeannerat/mnova_projects/multiplet_analysis/node_modules/esm/esm.js:1)
+    at zo (/Volumes/san256/users_for_mac_system_macPro/jeannerat/mnova_projects/multiplet_analysis/node_modules/esm/esm.js:1)
+    at $o (/Volumes/san256/users_for_mac_system_macPro/jeannerat/mnova_projects/multiplet_analysis/node_modules/esm/esm.js:1)
+    at xu (/Volumes/san256/users_for_mac_system_macPro/jeannerat/mnova_projects/multiplet_analysis/node_modules/esm/esm.js:1)
+    at wu (/Volumes/san256/users_for_mac_system_macPro/jeannerat/mnova_projects/multiplet_analysis/node_modules/esm/esm.js:1)
+    at Eu (/Volumes/san256/users_for_mac_system_macPro/jeannerat/mnova_projects/multiplet_analysis/node_modules/esm/esm.js:1)
+    at ku (/Volumes/san256/users_for_mac_system_macPro/jeannerat/mnova_projects/multiplet_analysis/node_modules/esm/esm.js:1)
+    at Proxy.<anonymous> (/Volumes/san256/users_for_mac_system_macPro/jeannerat/mnova_projects/multiplet_analysis/node_modules/esm/esm.js:1)
+    at Object.<anonymous> (/Volumes/san256/users_for_mac_system_macPro/jeannerat/mnova_projects/multiplet_analysis/node_modules/esm/esm.js:1)
+    at Tu (/Volumes/san256/users_for_mac_system_macPro/jeannerat/mnova_projects/multiplet_analysis/node_modules/esm/esm.js:1) {
+  code: 'MODULE_NOT_FOUND',
+  path: '/Volumes/san256/users_for_mac_system_macPro/jeannerat/mnova_projects/mult_analysis/node_modules/multiplet-analysis/package.json',
+  requestPath: 'multiplet-analysis'
+}
+```
 
 ## [API Documentation](https://djeanner.github.io/mult_analysis/)
 
