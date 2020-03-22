@@ -12,7 +12,7 @@ const result = myModule(doublet, {
 });
 
 writeFileSync(
-  join(__dirname, '../web', 'result.json'),
+  join(__dirname, '../docs', 'result.json'),
   JSON.stringify(result, null, 2),
   'utf8',
 );

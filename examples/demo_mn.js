@@ -41,7 +41,6 @@ for (let i = 0; i < data.multiplets.length; i++) {
       frequency: 600,
       debug: true,
       takeBestPartMultiplet: true,
-      minimalResolution: 0.01,
       appliedPhaseCorrectionType: 0,
     },
   );
@@ -56,7 +55,7 @@ for (let i = 0; i < data.multiplets.length; i++) {
 }
 
 writeFileSync(
-  join(__dirname, '../web', 'results_mn.json'),
+  join(__dirname, '../docs', 'results_mn.json'),
   JSON.stringify(results, null, 2),
   'utf8',
 );
