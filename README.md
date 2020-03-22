@@ -18,7 +18,9 @@ import library from 'mult_analysis';
 const result = library(args);
 // result is ...
 ```
+`npm i --save-dev esm`
 
+`node -r esm src/index.js`
 OK :
 ```
 npm install multiplet-analysis
