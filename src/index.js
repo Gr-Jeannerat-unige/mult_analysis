@@ -4,7 +4,8 @@ import { analyseMultiplet } from 'multiplet-analysis';
 import { writeFileSync } from 'fs';
 import { join } from 'path';
 
-let result = analyseMultiplet(doublet, {
+export function myModule() {
+  let result = analyseMultiplet(doublet, {
   frequency: 600,
   debug: true,
   takeBestPartMultiplet: true,
@@ -18,3 +19,5 @@ writeFileSync(
 );
 
 console.log(result);
+return 42
+}

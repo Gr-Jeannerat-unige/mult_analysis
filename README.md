@@ -19,6 +19,18 @@ const result = library(args);
 // result is ...
 ```
 
+OK:
+```
+npm install multiplet-analysis
+node -r esm examples/test.js
+```
+Not OK:
+```
+npm link multiplet-analysis
+node -r esm examples/test.js
+```
+
+
 ## [API Documentation](https://djeanner.github.io/mult_analysis/)
 
 ## License
