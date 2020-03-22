@@ -1,6 +1,6 @@
 import doublet from '../data/dd-exp2.json';
 
-import { analyseMultiplet } from 'multiplet-analysis';
+import { analyseMultiplet } from '/Volumes/san256/users_for_mac_system_macPro/jeannerat/mygit/multiplet-analysis//src/index';
 import { writeFileSync } from 'fs';
 import { join } from 'path';
 
