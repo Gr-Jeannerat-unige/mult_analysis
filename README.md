@@ -28,8 +28,7 @@ npm install multiplet-analysis
  *or*
 
 npm link multiplet-analysis
-npm i --save-dev esm
-node -r esm examples/test.js
+node -r esm examples/demo1.js
 ```
 this returns:
 ```
@@ -72,6 +71,11 @@ Error: Cannot find module 'multiplet-analysis'. Please verify that the package.j
   path: '/Volumes/san256/users_for_mac_system_macPro/jeannerat/mnova_projects/mult_analysis/node_modules/multiplet-analysis/package.json',
   requestPath: 'multiplet-analysis'
 }
+```
+## Run demo on mnova spectrum
+
+```
+node -r esm examples/demo_mn.js
 ```
 
 ## [API Documentation](https://djeanner.github.io/mult_analysis/)

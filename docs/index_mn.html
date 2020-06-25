@@ -8,7 +8,8 @@
 
 <body>
     <!-- <body bgcolor="#808080">  -->
-    <h4>Result of the recursive deconvolution of multiplet structures.</h4>
+    <h3>Result of the recursive deconvolution of multiplet structures</h3>
+    <h4>The last plot of each column (no value of J) correspond to the point where no more coupling were found.</h4>
     <table id="target" border="1" style="border-collapse: collapse;">
 
     </table>
@@ -82,6 +83,7 @@
                             tr.appendChild(tdMultiplet);
                             document.getElementById('target').appendChild(tr);
                             addMultiplet('multiplet' + index + '_' + indigo, step.multiplet, options);
+                            addErrorFunction('multiplet' + index + '_' + indigo, step.errorFunction, options);
                         } else {
                             tr.appendChild(tdMultiplet);
                         }
