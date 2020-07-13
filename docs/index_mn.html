@@ -52,17 +52,14 @@
             let responses = await fetch('./results_mn.json');
             let results = await responses.json();
             let max1 = 0, max2 = 0;
-            for (let indigo = 0; indigo < 10000; indigo++) {
-                if ((indigo < results.length)) {
+            for (let indigo = 0; indigo < results.length; indigo++) {
                     result = results[indigo];
                     steps = result.debug.steps;
-
                     for (let index = 0; index < 10000; index++) {
                         if ((index < steps.length)) {
                             if (max1 < indigo) { max1 = indigo; }
                             if (max2 < index) { max2 = index; }
                         }
-                    }
                 }
             }
             for (let index = 0; index < max2; index++) {
@@ -90,7 +87,6 @@
                     } else {
                         tr.appendChild(tdMultiplet);
                     }
-
                 }
             }
         }
