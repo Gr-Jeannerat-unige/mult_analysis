@@ -101,7 +101,8 @@
                 .setWaveform(waveForm)
                 .setLineColor('blue')
                 .getYAxis()
-                .setScientific(true);
+                .setScientific(true)
+
             //.secondaryGridOff(false);//.setColor('red');
             let waveForm2 = Graph.newWaveform();
             if (!(typeof data.s === 'undefined')) {
@@ -112,9 +113,10 @@
                     .setWaveform(waveForm2)
                     .setLineColor('green')
                     .getYAxis()
-                    .setScientific(true);
+                    .setScientific(true)
                 //.secondaryGridOff(false);//.setColor('red');
             }
+            graph.getXAxis().flip(true)
             graph.draw(); // Draw
         }
 
