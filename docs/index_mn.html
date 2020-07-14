@@ -57,8 +57,8 @@
                     steps = result.debug.steps;
                     for (let index = 0; index < 10000; index++) {
                         if ((index < steps.length)) {
-                            if (max1 < indigo) { max1 = indigo; }
-                            if (max2 < index) { max2 = index; }
+                            if (max1 < indigo) { max1 = indigo+1; }
+                            if (max2 < index) { max2 = index+1; }
                         }
                 }
             }
@@ -67,7 +67,6 @@
                 for (let indigo = 0; indigo < max1; indigo++) {
                     let tdMultiplet = document.createElement('TD');
                     tdMultiplet.setAttribute('id', 'multiplet' + index + '_' + indigo);
-                    if ((indigo < results.length)) {
                         result = results[indigo];
                         steps = result.debug.steps;
                         if ((index < steps.length)) {
@@ -75,7 +74,7 @@
                             let j = result.j[index];
                             if (j) {
                                 tdMultiplet.innerHTML =
-                                    j.multiplicity + ': ' + j.coupling.toFixed(3) + ' Hz';
+                                    j.multiplicity + ': ' + j.coupling.toFixed(3) + ' Hz ' + results.length;
                             }
                             tr.appendChild(tdMultiplet);
                             document.getElementById('target').appendChild(tr);
@@ -84,9 +83,6 @@
                         } else {
                             tr.appendChild(tdMultiplet);
                         }
-                    } else {
-                        tr.appendChild(tdMultiplet);
-                    }
                 }
             }
         }
